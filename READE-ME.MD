@@ -23,7 +23,7 @@ docker network connect cadastro-network mysqldb
 ## Comando para inspecionar a rede
 docker network inspect cadastro-network
 
-//--> Comando para criar a container do mysql e logo após configurar as variaveis de ambiente na aplicação
+## Comando para criar a container do mysql e logo após configurar as variaveis de ambiente na aplicação
 docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_DATABASE=testedb -p 3307:3306 -d mysql
 
 ## Comando para criar o containe com a imagem sem a rede de conxao com o banco
@@ -32,7 +32,7 @@ docker run -p 9090:8080 --name cadastro -e MYSQL_HOST=mysqldb -e MYSQL_USER=root
 ## Comando para inserir a network para unir a imagem da aplicação ao mysqldb
 docker run -p 9090:8080 --name app --net cadastro-network -e MYSQL_HOST=mysqldb -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 app
 
-/--> para criar o volume
+## Comando para criar o volume
 docker run -d -p 3307:3306 --net newnet --name mysqldb -e MYSQL_HOST=mysqldb -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 -v "/home/ernilson/Desktop/db":/var/lib/mysql mysql
 
 ## Comando para chamar o docker-compose up
