@@ -8,6 +8,11 @@ docker network create cadastro-network
 ## Comando para acessar o container como root
 docker exec -it mysqldb mysql -uroot -p
 
+## Configuração do Application.property
+ - spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/testedb
+ - spring.datasource.username=${MYSQL_USER:nonow}
+ - spring.datasource.password=${MYSQL_PASSWORD:nonow}
+
 ## Comando para criar a container do mysql e logo após configurar as variaveis de ambiente na aplicação
 docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_DATABASE=testedb -p 3307:3306 -d mysql
 
@@ -38,4 +43,7 @@ docker run -d -p 3307:3306 --net newnet --name mysqldb -e MYSQL_HOST=mysqldb -e 
 ## Comando para chamar o docker-compose up
 docker-compose up
 docker-compose down
+
+## Esquema
+- ![Esquema](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/54127089-d859-4840-8457-b42dc16c9979)
 
