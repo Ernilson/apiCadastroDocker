@@ -14,6 +14,7 @@ docker exec -it mysqldb mysql -uroot -p
  - spring.datasource.password=${MYSQL_PASSWORD:nonow}
  - ![A](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/772eaeb9-0347-40eb-b653-a8f98b17eefe)
 ## Configuração das Variaveis de Ambientes no config do springboot
+ - ![springbootapp](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/199c67b0-dee1-4ed6-99a4-c99e125c709c)
 
 ## Comando para criar a container do mysql e logo após configurar as variaveis de ambiente na aplicação
 docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_DATABASE=testedb -p 3307:3306 -d mysql
