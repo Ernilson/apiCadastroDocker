@@ -10,8 +10,8 @@ docker exec -it mysqldb mysql -uroot -p
 
 ## Configuração do Application.property
  - spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/testedb
- - spring.datasource.username=${MYSQL_USER:nonow}
- - spring.datasource.password=${MYSQL_PASSWORD:nonow}
+ - spring.datasource.username=${MYSQL_USER:Laravel}
+ - spring.datasource.password=${MYSQL_PASSWORD:Laravel}
  - ![A](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/772eaeb9-0347-40eb-b653-a8f98b17eefe)
 ## Configuração das Variaveis de Ambientes no config do springboot
  - ![springbootapp](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/199c67b0-dee1-4ed6-99a4-c99e125c709c)
