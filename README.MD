@@ -12,6 +12,7 @@ docker exec -it mysqldb mysql -uroot -p
  - spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/testedb
  - spring.datasource.username=${MYSQL_USER:nonow}
  - spring.datasource.password=${MYSQL_PASSWORD:nonow}
+ - ![A](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/772eaeb9-0347-40eb-b653-a8f98b17eefe)
 
 ## Comando para criar a container do mysql e logo após configurar as variaveis de ambiente na aplicação
 docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_DATABASE=testedb -p 3307:3306 -d mysql
