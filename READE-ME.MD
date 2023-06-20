@@ -39,3 +39,6 @@ docker run -d -p 3307:3306 --net newnet --name mysqldb -e MYSQL_HOST=mysqldb -e 
 docker-compose up
 docker-compose down
 
+## Esquema
+- ![Esquema](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/54127089-d859-4840-8457-b42dc16c9979)
+
