@@ -5,6 +5,9 @@
 ## Comando para criar o Networks
 docker network create cadastro-network
 
+## Comando para criar uma variavel simples
+docker run --name containerMySQL -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql
+
 ## Comando para acessar o container como root
 docker exec -it mysqldb mysql -uroot -p
 
