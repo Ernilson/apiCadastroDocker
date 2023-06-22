@@ -2,6 +2,12 @@
 - docker build -t cadastro:tag .
 - docker build -t app .
 
+## Comando para criar a tag
+docker tag app ernilson/devsibreaplataform
+
+## Comando para criar a tag
+docker push ernilson/devsibreaplataform
+
 ## Comando para criar o Networks
 docker network create cadastro-network
 
@@ -16,6 +22,7 @@ docker exec -it mysqldb mysql -uroot -p
  - spring.datasource.username=${MYSQL_USER:Laravel}
  - spring.datasource.password=${MYSQL_PASSWORD:Laravel}
  - ![A](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/772eaeb9-0347-40eb-b653-a8f98b17eefe)
+
 ## Configuração das Variaveis de Ambientes no config do springboot
  - ![springbootapp](https://github.com/Ernilson/apiCadastroDocker/assets/30840118/199c67b0-dee1-4ed6-99a4-c99e125c709c)
 
@@ -33,6 +40,9 @@ docker network connect cadastro-network mysqldb
 
 ## Comando para inspecionar a rede
 docker network inspect cadastro-network
+
+## Comando para expecionar o container
+docker container inspect mysqldb
 
 ## Comando para criar a container do mysql e logo após configurar as variaveis de ambiente na aplicação
 docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_DATABASE=testedb -p 3307:3306 -d mysql
