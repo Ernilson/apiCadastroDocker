@@ -5,7 +5,7 @@
 ## Comando para criar a tag
 docker tag app ernilson/devsibreaplataform
 
-## Comando para criar a tag
+## Comando para enviar para o github
 docker push ernilson/devsibreaplataform
 
 ## Comando para criar o Networks
